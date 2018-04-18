@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-using namespace std;
 struct Node{
     Node():totalSum(0),left(nullptr),right(nullptr),leftSide(-1),rightSide(-1)
     {}
@@ -100,15 +97,3 @@ void travel(Node *root)
         travel(root->right);
     }
 }
-
-int main()
-{
-    vector<int> vec={1,2,3,4,5,6,7,8,9,10};
-    Node*root=buildIntervalTree(vec);
-    travel(root);
-    change(root,2,5);
-    cout<<endl;
-    travel(root);
-    return 0;
-}
-
